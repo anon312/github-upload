@@ -1,0 +1,131 @@
+\documentclass[12pt,letter]{article}%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage[breaklinks=true,bookmarksopen=true,colorlinks=true,citecolor=blue]%
+{hyperref}
+\usepackage[height=8.5in,left=0.8in,right=0.75in,bottom=1in,dvips]{geometry}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+%TCIDATA{Created=Saturday, January 06, 2007 11:18:42}
+%TCIDATA{LastRevised=Friday, January 26, 2018 12:37:28}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\linespread{1.05}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\catcode`\@=11
+\def\indpdt{\setbox0\hbox{$\m@th\perp$}\mathrel{\hbox
+to1.25\wd0{\copy0\hss\box0}}}
+\catcode`\@=12
+\begin{document}
+
+\begin{center}
+Econ 521: Econometric Methods I
+
+Assignment 1
+\end{center}
+
+\noindent Name(s): Your name(s) go(es) here.\smallskip
+
+\setlength\parindent{0pt}
+
+\begin{enumerate}
+\item Consider the following regression model%
+\[%
+\begin{tabular}
+[c]{lll}%
+$y=g(\mathbf{x},\mathbf{z}_{1})+\varepsilon$; &  & $\mathbf{z=[z}_{1}^{\prime
+}$,$\mathbf{z}_{2}^{\prime}\mathbf{]}^{\prime}$,\\
+$\mathbf{x}=\mathbf{h}(\mathbf{z})+\mathbf{u}$; &  & $\mathbb{E}%
+[\mathbf{u}|\mathbf{z}]=0$, $\mathbb{E}[\varepsilon|\mathbf{z},\mathbf{u}%
+]=\mathbb{E}[\varepsilon|\mathbf{u}]$,
+\end{tabular}
+\ \
+\]
+where $y$ is an observable scalar random variable, $g$ denotes a known scalar
+function, $\mathbf{x}$ is a $d_{\mathbf{x}}\times1$ vector of explanatory
+variables, $\mathbf{z}_{1}$ and $\mathbf{z}_{2}$ are $d_{1}\times1$ and
+$d_{2}\times1$ vectors of instrumental variables, $\mathbf{h}:=[h_{1}%
+,\ldots,h_{d_{\mathbf{X}}}]^{\prime}$ is a $d_{\mathbf{x}}\times1$ vector of
+functions of instruments $\mathbf{z}$, and $\mathbf{u}$ and $\varepsilon$ are
+disturbances. What does $\mathbb{E}[y|\mathbf{x},\mathbf{z},\mathbf{u}]$ equal to?
+
+\noindent\textbf{Answer}: Your answer goes here.
+
+\item Let $x$ be an absolutely continuous random variable with strictly
+increasing cdf $F_{x}$. Let $\widehat{q}$ be the value that minimizes
+$\mathbb{E}[\rho_{\tau}(x-q)]$ with respect to $q$, where $\rho_{\tau
+}(u)=u[\tau-\mathbb{I}(u<0)]$ and $\mathbb{I}(A)$ is called the indicator
+function that equals one if $A$ is true and $0$ otherwise. Show that
+$\widehat{q}\equiv F_{x}^{-1}(\tau)$. Hint: Use the Leibniz integral rule.
+
+\noindent\textbf{Answer}: Your answer goes here.
+
+\item Let $y$ be the response variable variable, $\mathbf{x}$ a set of
+$d_{\mathbf{x}}\times1$ conditioning variables, and $s$ a scalar binary group
+indicator (such as gender, college graduate versus non-college graduate, and
+so on). Define $\mu_{0}(\mathbf{x})=\mathbb{E}[y|\mathbf{x},s=0]$ and $\mu
+_{1}(\mathbf{x})=\mathbb{E[}y|\mathbf{x},s=1\mathbb{]}$ to be the regression
+functions for the two groups.
+
+\begin{enumerate}
+\item Show that
+\begin{align*}
+\mathbb{E}[y|s=1]-\mathbb{E}[y|s=0]=  &  \{\mathbb{E}[\mu_{1}(\mathbf{x}%
+)|s=1]-\mathbb{E}[\mu_{0}(\mathbf{x})|s=1]\}\\
+&  +\{\mathbb{E}[\mu_{0}(\mathbf{x})|s=1]-\mathbb{E}[\mu_{0}(\mathbf{x}%
+)|s=0]\}\text{,}%
+\end{align*}
+Hint: Use a suitable representation of $\mathbb{E}[y|\mathbf{x},s]$ as a function of $\mu
+_{0}(\mathbf{x})$ \underline{and} $\mu_{1}(\mathbf{x})$, and then apply the \emph{Law of Iterated Expectations}.
+
+\noindent\textbf{Answer}: Your answer goes here.
+
+\item Suppose both expectations are linear: $\mu_{s}(\mathbf{x})=\mathbf{x}%
+^{\prime}{\beta}_{s}$, $s\in\{0,1\}$. Show that
+\[
+\mathbb{E}[y|s=1]-\mathbb{E}[y|s=0]=\mathbb{E}[\mathbf{x}'|s=1]\times\{{\beta
+}_{1}-{\beta}_{0}\}+\{\mathbb{E}[\mathbf{x}'|s=1]-\mathbb{E}[\mathbf{x}'%
+|s=0]\}\times{\beta}_{0}\text{.}%
+\]
+Can you interpret this decomposition?\medskip
+
+\noindent\textbf{Answer}: Your answer goes here.
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document} 
